@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+    --primary-color: rgb(10,130,189);
+    --secondary-color: ;
+      
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    font-family: "Unbounded";
+}
+
+main
+{
+    background-image: url(../images//background/bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    position: relative;
+}
+.main_overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wrapper
+{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+.p_show
+{
+    display: block;
+}
+.p_tag
+{
+    background-color: rgb(226, 238, 255);
+    width: 131px;
+    height: 29px;
+    border-radius: 50px;
+    font-size: 10px;
+    color: rgb(87, 82, 86);
+    text-align: center;
+    line-height: 29px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-weight: 500;
+
+
+}
+.p_title
+{
+    font-size: 40px;
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+}
+.carousel
+{
+    min-height: 600px;
+    display: grid;
+    align-items: center;
+    z-index: 9;
+}
+.carousel-inner
+{
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.carousel-inner .carousel-item
+{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.carousel-inner .carousel-item img
+{
+    width: 100%;
+}
+.circle-shape
+{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 472px;
+    height: 472px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+  
+.prev_btn, .next_btn
+{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    transform: translate(0%, -50%);
+    transition: 0.5s;
+}
+.prev_btn img, .next_btn img
+{
+    transition: 0.3s;
+}
+.prev_btn
+{
+    left: 0;
+}
+.prev_btn:hover img
+{
+    padding-right: 10px;
+}
+.next_btn
+{
+    right: 0;
+}
+.next_btn:hover img
+{
+    padding-left: 10px;
+}
+.p_text
+{
+    font-size: 16px;
+    color: rgb(41, 41, 41);
+    width: 48%;
+    margin: 0 auto;
+}
+.give_review
+{
+    background-image: linear-gradient( 90deg, rgb(40,175,226) 0%, rgb(39,47,98) 66%);
+    height: 65px;
+    padding: 0 50px;
+    border-radius: 50px;
+    border: 0;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 40px;
+    overflow: hidden;
+      
+}
+.give_review::before, .give_review::after
+{
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255,0.5);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0% 100%);
+    transition: 0.4s;
+    z-index: 0;
+
+
+}
+.give_review:hover::before,.give_review:hover::after
+{
+    right: -100%;
+}
+.give_review::after
+{
+    transition-delay: 0.2s;
+
+
+}
+.p_tag, .p_text, .p_title, .give_review
+{
+    position: relative;
+    z-index: 10;
+}
+
+.loading
+{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255,255,255);
+    z-index: 110;
+    display: none;
+    place-content: center;
+
+}
+.loading img
+{
+    margin: 0 auto;
+}
+.loading img:first-child
+{
+    width: 100%;
+    height: 120px;
+}
+.loading img:last-child
+{
+    width: 100px;
+}
+/* product-rating */
+.p_rating, .thankyou-page
+{
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 90px 0px rgba(19, 19, 19, 0.08);
+    width: 78%;
+    min-height: 300px;
+    padding: 100px 100px 60px 100px;
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    display: none;
+    background-image: url(../images/background/rating_bg.png);
+    background-size: cover;
+    background-position: 0 140px;
+    background-repeat: no-repeat;
+
+}
+.p_rating .p_tag
+{
+    margin-right: auto;
+    margin-left: 0;
+
+}
+.p_rating .p_title
+{
+    width: 70%;
+    text-align: start;
+    margin-right: auto;
+    margin-left: 0;
+}
+.rating-bars
+{
+    margin-top: 90px;
+}
+.bar-single span, .total-rating
+{
+    font-size: 14px;
+    text-align: start;
+    display: block;
+    color: rgb(87, 82, 86);
+    text-transform: uppercase; 
+}
+.bar-single-inner
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.bar-fill
+{
+    background-color: rgb(228, 228, 228);
+    width: 8%;
+    height: 10px;   
+    border-radius: 10px;
+    cursor: pointer;
+}
+.bar-fill.filled
+{
+    background-color: var(--primary-color) !important;
+}
+
+.bar-fill.filled-hover
+{
+    background-color: var(--primary-color) !important;
+}
+.P_overview
+{
+    position: absolute;
+    right: 95px;
+    top: 150px;
+    width: 25%;
+    height: 120px;
+    z-index: 120;
+}
+.P_overview img
+{
+    width: 100%;
+}
+.rating_circle
+{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    height: auto;
+}
+.t_rating
+{
+    width: auto;
+    height: auto;
+
+}
+.t_rating .circle1
+{
+    stroke-width: 10px;
+    fill: rgb(255, 255, 255);
+    stroke: rgb(228, 228, 228);
+
+}
+.t_rating .circle2
+{
+    stroke-width: 10px;
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-dasharray: 471;
+    stroke-dashoffset: 471;
+    transition: 0.5s;
+}
+#average-rating
+{
+    font-size: 34px;
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.thankyou-page
+{
+    display: block;
+    padding: 60px;
+    padding-bottom: 100px;
+}
+.thankyou-page img
+{
+    width: auto;
+}
+.thankyou-page h3
+{
+    font-size: 38px;
+    color: rgb(41, 41, 41);
+    text-align: center;
+    margin: 30px 0;
+
+}
+.socialIcons
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.socialIcons img
+{
+    width: 25px;
+    height: auto;
+    margin: 0 7px;
+}

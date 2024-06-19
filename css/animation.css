@@ -1,0 +1,14 @@
+.no-stroke
+{
+    animation: stroke-zero 1s ease-in-out;
+}
+@keyframes stroke-zero {
+    from
+    {
+        stroke-dashoffset: 0;
+    }
+    to
+    {
+        stroke-dashoffset: 471;
+    }
+}

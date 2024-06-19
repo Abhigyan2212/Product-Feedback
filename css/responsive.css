@@ -1,0 +1,139 @@
+/* large screens */
+@media (min-width: 1600px)
+{
+
+}
+
+
+@media (max-width: 1500px)
+{
+
+}
+
+
+/* Desktops/Laptops */
+@media (max-width: 1200px)
+{
+    .p_title
+    {
+        font-size: 30px;
+    }
+    .p_text
+    {
+        width: 65%;
+    }
+    .p_rating
+    {
+        padding: 60px;
+    }
+    .P_overview
+    {
+        top: 120px;
+    }
+}
+
+/* Laptops */
+@media (max-width: 1024px)
+{
+
+}
+
+/* Tablets */
+@media (max-width: 768px)
+{
+    .p_title
+    {
+        font-size: 25px;
+    }
+    .p_text
+    {
+        font-size: 14px;
+        width: 65%;
+    }
+    .p_rating
+    {
+        padding: 60px;
+        margin-top: 90px;
+    }
+    .p_rating, .thankyou-page
+    {
+        width: 90%;
+    }
+    .P_overview
+    {
+        position: fixed;
+        width: 100%;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%,0%);
+        background-color: rgb(255,255,255);
+        height: 140px;
+        padding: 20px 0;
+
+    }
+    .P_overview img
+    {
+        width: auto;
+        height: 100%;
+    }
+    .rating_circle
+    {
+        top: 50%;
+    }
+}
+
+/* mobile */
+@media (max-width: 480px)
+{
+    .p_title
+    {
+        width: 100%;
+        font-size: 20px;
+    }
+    .prev_btn, .next_btn
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .carousel 
+    {
+        min-height: 300px;
+    }
+    .p_text
+    {
+        width: 100%;
+    }
+    .prev_btn img, .next_btn img
+    {
+        width: 40%;
+    }
+    .p_rating
+    {
+        padding: 20px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .P_overview
+    {
+        display: none;
+    }
+    .p_title
+    {
+        width: 100% !important;
+        font-size: 18px;
+    }
+    .thankyou-page
+    {
+        padding: 20px;
+        width: 100%;
+    }
+    .thankyou-page img
+    {
+        width: 100%;
+    }
+    .socialIcons img
+    {
+        width: 50%;
+    }
+
+}
